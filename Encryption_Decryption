@@ -1,0 +1,26 @@
+def CeaserCipherEncryption():
+  
+  alpha =['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+  e=""
+  d=""
+  text =input("Enter  text: ")
+  key=int(input("Enter shift key: "))
+  encypt_decrypt=input("Enter 'e' for encryption and 'd' for decryption: ")
+  if encypt_decrypt=="e":
+    for i in text.lower():
+      if i==' ':
+        e+=' '
+      else:
+        index=(alpha.index(i)+key)%26
+        e+=alpha[index]
+    print(f"Encrypted message: {e}")
+  elif encypt_decrypt=="d":
+    for i in text.lower():
+      if i==' ':
+        d+=' '
+      else:
+        index=(alpha.index(i)-key)%26
+        d+=alpha[index]
+    print(f"Decrypted message: {d}")
+    
+CeaserCipherEncryption()
