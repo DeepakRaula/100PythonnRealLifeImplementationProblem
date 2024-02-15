@@ -1,0 +1,14 @@
+print("Welcome to Text-Based Adventire game")
+print("You are stuck in a palace having 4 main doors 1 main door leading to treassure and other to monster")
+choice=int(input("Select any 1 door from (1 to 4): "))
+if choice==3:
+  print("Way closer to treassure ")
+  box_choice=input("Select any 1 box out 3 colour boxes ie red,yellow and blue.ENTER 'R' for red ,'Y' for yellow and 'B' for blue: ").lower()
+  if box_choice=='r':
+    print("You lost the treassure but you are safe from monster")
+  elif box_choice=='b':
+    print("Woho You won the treassure ")
+  elif box_choice=='y':
+    print("You lost the tressure.But you will get Rs 10,000 and also you are save from monster")
+elif choice==1 or choice==2 or choice==4:
+  print("Opps.You are attacked by monster")
