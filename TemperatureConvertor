@@ -1,0 +1,30 @@
+def temperature_Conversion():
+  print("Temperator Convertor")
+  print("Enter 1 to convert from Celsius to Fahrenheit")
+  print("Enter 2 to convert from Fahrenheit to Celsius")
+  print("Enter 3 to convert from Celsius to Kelvin")
+  print("Enter 4 to convert from Kelvin to Celsius")
+  
+  choice=int(input("Enter the choice number: "))
+  if choice==1:
+    celicus=float(input("Enter the temperature in Celsius: "))
+    fahrenheit=(celicus*9/5)+32
+    print("The temperature in Fahrenheit is: ",fahrenheit)
+  elif choice==2:
+    fahrenheit=float(input("Enter the temperature in fahrenhit: "))
+    celicus=5/9*(fahrenheit-32)
+    print("The temperature in Celsius is: ",celicus)
+  elif choice==3:
+    celicus=float(input("Enter the temperature in Celsius: "))
+    kelvin=celicus+273
+    print("The temperature in Kelvin is: ",kelvin)
+  elif choice==4:
+    kelvin=float(input("Enter the temperature in Kelvin: "))
+    celicus=kelvin-273
+    print("The temperature in Celsius is: ",celicus)
+  else:
+    print("Pls enter valid option from 1 to 4")
+    
+    
+
+temperature_Conversion()
