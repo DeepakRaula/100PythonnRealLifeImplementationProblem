@@ -1,0 +1,18 @@
+def NumberGuessingGame():
+  import random
+  number = random.randint(1, 100)
+  guess = int(input("You have 10 chances Guess a number between 1 and 100: "))
+  chance=10
+  while chance:
+    chance-=1
+    if guess==number:
+      print("You guessed the number right!")
+      break
+    elif guess < number:
+      print("Too low, try again")
+      guess = int(input("Guess a number between 1 and 100: "))
+    elif guess > number:
+      print("Too high, try again")
+      guess = int(input("Guess a number between 1 and 100: "))
+  
+NumberGuessingGame()
