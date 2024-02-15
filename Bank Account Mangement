@@ -1,0 +1,35 @@
+class BankAccountManagement():
+    def __init__(self, name,balance):
+        self.name = name
+        self.balance = balance
+    def deposit(self,amount):
+        self.balance += amount
+        print("Deposited amount:",amount)
+    def withdraw(self,amount):
+        if self.balance >= amount:
+            self.balance -= amount
+            print("Withdrawn amount:",amount)
+        else:
+            print("Insufficient balance in the account")
+    def display(self):
+        print("Name:",self.name)
+        print("Balance:",self.balance)
+
+name = input("Enter name: ")
+balance = int(input("Enter balance: "))
+cust1=BankAccountManagement(name,balance)
+print("Enter the following number to perform the operations: ")
+print("1. Display")
+print("2. Withdraw")
+print("3. Deposit")
+operation=int(input("Enter the choice: "))
+if operation==1:
+  cust1.display()
+elif operation==2:
+  withdraw_amt=int(input("Enter the amount you want to withdraw :"))
+  cust1.withdraw(withdraw_amt)
+  cust1.display()
+elif operation==3:
+  deposite=int(input("Enter the amount you want to deposite :"))
+  cust1.deposit(deposite)
+  cust1.display()
