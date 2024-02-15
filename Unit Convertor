@@ -1,0 +1,43 @@
+def UnitConvertor():
+  print(" Unit Convertor")
+  print("Select the following number to do the particular conversions: ")
+  print("1. Meter to centimeter")
+  print("2. Centimeter to meter")
+  print("3. Kilometer to meter ")
+  print("3. Meter to kilometer ")
+  print("4. Kilogram to gram ")
+  print("5. Gram to kilogram")
+  print("6. Foot to kilometer ")
+  print("7. Kilometer to foot")
+  choice=int(input("Enter your choice: "))
+  if choice==1:
+    meter=float(input("Enter the value in meter: "))
+    centimeter=100*meter
+    print(f"The value of {meter} meter is  {centimeter} centimeter")
+  elif choice==2:
+    centimeter=float(input("Enter the value in centimeter: "))
+    meter=centimeter/100
+    print(f"The value of {centimeter} centimeter is {meter} meter")
+  elif choice==3:
+    kilometer=float(input("Enter the value in kilometer: "))
+    meter=1000*kilometer
+    print(f"The value of {kilometer} kilometer is {meter} meter")  
+  elif choice==4:
+    kilogram=float(input("Enter the value in kilogram: "))
+    gram=1000*kilogram
+    print(f"The value of {kilogram} kilogram is {gram} gram")  
+  elif choice==5:
+    gram=float(input("Enter the value in gram: "))
+    kilogram=gram/1000
+    print(f"The value of {gram} gram is {kilogram} kilogram")
+  elif choice==6:
+    foot=float(input("Enter the value in foot: "))
+    kilometer=foot/3281
+    print(f"The value of {foot} foot is {kilometer} kilometer")
+  elif choice==7:
+    kilometer=float(input("Enter the value in kilometer: "))
+    foot=3281*kilometer
+    print(f"The value of {kilometer} kilometer is {foot} foot")
+  else:
+    print("Invalid choice.Choose number between 1 to 7")
+UnitConvertor()
