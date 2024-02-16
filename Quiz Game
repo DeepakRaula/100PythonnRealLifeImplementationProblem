@@ -1,0 +1,43 @@
+print("Quiz Game")
+questions=("1. Who is PM of India?: ",
+           "2. What is full form of AI?: ",
+           "3. What is capital of India?: ", 
+           "4. Who is CM of Maharashtra?: ", 
+           "5. What is capital of Maharashtra?:",
+           "6. What is India's national bird?: ",
+           "7.What is full form of ML?: ",
+           "8. Who is India's 'God of Cricket'?: ")
+
+choices = (("A. Yogi Adityanath", "B. Naredra Modi", "C. Amit Shah", "D. Arvind Keriwal"),
+("A. Artificial Intelligence", "B. Art India", "C. Artificial Internet", "D. Art Intelligence"),
+("A. Mumbai", "B. Rajasthan", "C. New -Delhi", "D. Kerala"),
+("A. Eknath Shinde", "B. Shiv Thakre", "C. Raj Thakre", "D. Uday Thakre"),
+("A. Pune", "B. Nashik", "C. Nagpur", "D. Mumbai"),
+("A. Peacock", "B. Crow", "C. Pigeon", "D. Owl"),
+("A. Mathematics Logistics", "B. Math Learning", "C. Machine Law", "D.Machine Learning "),
+("A. Virat Kohli", "B. Sachin Tendulkar", "C. Rohit Sharma", "D. MS Dhoni")
+          )
+answers = ("B", "A", "C", "A", "D","A","D","B")
+guesses = []
+score = 0
+q_num = 0
+
+for question in questions:
+    print("")
+    print(question)
+    for choice in choices[q_num]:
+        print(choice)
+
+    guess = input("Enter (A, B, C, D): ").upper()
+    guesses.append(guess)
+    if guess == answers[q_num]:
+        score += 1
+        print(f"CORRECT!Your score {score}")
+    else:
+        print(f"INCORRECT!Your score {score}")
+        print(f"{answers[q_num]} is the correct answer")
+    q_num += 1
+
+
+score = int(score / len(questions) * 100)
+print(f"Your score is: {score}%")
