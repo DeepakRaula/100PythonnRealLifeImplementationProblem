@@ -1,0 +1,30 @@
+import random
+print("Welcome to Hangman Game")
+print("Guess the countries name ,continents name and indian states: ")
+
+words_list=["mumbai","kerala","goa","delhi","shimla","italy","africa","nepal","dubai","egypt","india","japan",
+          "assam","bihar","chennai","germany","canada","bhutan","europe","up","punjab","gujarat","sikkim"]
+chosen_word=random.choice(words_list)
+
+dash=[]
+for i in chosen_word:
+    dash+="-"
+print(dash)
+lives=8
+
+while "-" in dash:
+    guessed_letter=input("Guess a letter: ").lower()
+    for position in range(0,len(chosen_word)):                              
+        letter=chosen_word[position]                        
+        if letter==guessed_letter:
+            dash[position]=letter
+            print(f"{lives} lives Left")
+    if guessed_letter not in chosen_word:                     
+        lives-=1
+        print(f"{lives} lives Left")
+        if lives==0:
+            break
+    print(dash)
+    if "-" not in dash:
+        print("Wohoo.U Won the game before hangman losing his life")
+print(f"The word was {chosen_word}")
